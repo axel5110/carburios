@@ -1,0 +1,14 @@
+ERREUR CORRIGEE
+
+Le déploiement a échoué parce que Cloudflare lançait :
+npx wrangler deploy
+
+Il ne faut PAS utiliser cette commande.
+
+Dans Cloudflare Pages :
+- Framework preset : None
+- Build command : vide
+- Build output directory : .
+- Root directory : vide
+
+Cette version ne contient plus package.json pour éviter Wrangler.
