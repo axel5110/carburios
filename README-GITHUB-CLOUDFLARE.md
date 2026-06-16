@@ -1,29 +1,41 @@
-# Carburio - Cloudflare Pages GitHub
+# Carburio - ZIP propre pour Cloudflare Pages + GitHub
 
-IMPORTANT : ce projet doit être déployé avec Cloudflare Pages, pas avec Worker/Wrangler.
+⚠️ Important : ce projet doit être créé dans Cloudflare **Pages**, pas dans Workers.
 
-## Réglages Cloudflare Pages
+## Arborescence
 
-Framework preset : None
-Build command : laisser vide
-Build output directory : .
-Root directory : laisser vide
-
-Ne mets pas :
-npx wrangler deploy
-
-## Arborescence obligatoire
+Tu dois avoir à la racine du dépôt GitHub :
 
 index.html
 style.css
 compare.js
 assets/
 functions/api/carburants.js
+confidentialite.html
+mentions-legales.html
+robots.txt
+sitemap.xml
 
-Le dossier functions est nécessaire pour le comparateur.
+## Réglages Cloudflare Pages
+
+Quand tu crées le projet :
+
+- Type : Pages
+- Méthode : Connect to Git
+- Framework preset : None
+- Build command : laisser vide
+- Build output directory : .
+- Root directory : laisser vide
+
+Ne mets PAS :
+npx wrangler deploy
+
+Si Cloudflare demande une “Deploy command” obligatoire, tu es dans Workers, pas dans Pages.
 
 ## Test après déploiement
 
+Remplace ton-site.pages.dev par ton URL :
+
 https://ton-site.pages.dev/api/carburants?q=02700&fuel=e10
 
-Si tu vois du JSON avec "results", c'est bon.
+Si tu vois du JSON avec results, le comparateur fonctionne.

@@ -1,0 +1,11 @@
+ZIP PROPRE POUR GITHUB + CLOUDFLARE PAGES
+
+1. Dézippe le fichier.
+2. Envoie le CONTENU du dossier dans GitHub.
+3. Dans Cloudflare, crée un nouveau projet dans l'onglet PAGES.
+4. Ne choisis pas Workers.
+5. Build command : vide
+6. Build output directory : .
+7. Root directory : vide
+
+Ce ZIP ne contient PAS package.json pour éviter que Cloudflare lance Wrangler.
