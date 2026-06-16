@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Carburio - Essence moins chère autour de vous</title>
+  <meta name="description" content="Carburio compare les prix des carburants, trouve les stations proches et vous aide à économiser à chaque plein.">
+  <meta name="theme-color" content="#16A34A">
+  <link rel="icon" href="assets/carburio-icon.png">
+  <link rel="apple-touch-icon" href="assets/carburio-icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="#top"><img src="assets/carburio-icon.png" alt="Logo Carburio"><span>Carburio</span></a>
+    <nav class="navlinks">
+      <a href="#comparer">Comparer</a>
+      <a href="#fonctionnalites">Fonctionnalités</a>
+      <a href="#comment">Comment ça marche</a>
+      <a href="#carburants">Carburants</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.carburio.app&utm_source=emea_Med" target="_blank" rel="noopener">▷ Télécharger sur Google Play</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="app-title">
+          <img src="assets/carburio-icon.png" alt="Icône application Carburio">
+          <span>Carburio</span>
+        </div>
+        <h1>Stop à l’essence <span class="spark">trop chère</span></h1>
+        <p class="lead">Compare les prix des carburants, trouve les stations autour de toi et économise à chaque plein avec l’application Carburio.</p>
+        <div class="ctas">
+          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.carburio.app&utm_source=emea_Med" target="_blank" rel="noopener">▶ Télécharger sur Google Play</a>
+          <a class="btn btn-secondary" href="#comparer">⛽ Comparer les prix</a>
+          <a class="btn btn-secondary" href="#fonctionnalites">↓ Découvrir l’application</a>
+        </div>
+        <div class="trust"><span class="check">✓</span> Gratuit · Rapide · Fiable · Sans inscription</div>
+      </div>
+
+      <div class="phone-wrap" aria-label="Aperçu application Carburio">
+        <div class="phone">
+          <div class="screen">
+            <div class="status"><span>9:41</span><span>◔ 5G 🔋</span></div>
+            <div class="appbar">
+              <div class="appbar-left"><img src="assets/carburio-icon.png" alt="">Carburio</div>
+              <div class="bell">♡</div>
+            </div>
+            <div class="location">⌖ Autour de moi</div>
+            <div class="price-card">
+              <div class="pump-icon">⛽</div>
+              <div>
+                <div class="price-label">Meilleur prix à proximité</div>
+                <div class="price">1,62 €/L</div>
+                <div class="small">Station E.Leclerc · 2,4 km</div>
+              </div>
+            </div>
+            <div class="chips">
+              <div class="chip active">SP95</div><div class="chip">E10</div><div class="chip">E85</div><div class="chip">GPLc</div>
+            </div>
+            <div class="list-title">Stations autour de moi</div>
+            <div class="station">
+              <div style="font-weight:950;color:#16A34A">L</div>
+              <div><div class="station-name">E.Leclerc</div><div class="small">SP95</div></div>
+              <div class="station-price">1,62 €/L<br><span class="small">2,4 km</span></div>
+            </div>
+            <div class="station">
+              <div style="font-weight:950;color:#16A34A">I</div>
+              <div><div class="station-name">Intermarché</div><div class="small">SP95</div></div>
+              <div class="station-price">1,65 €/L<br><span class="small">3,1 km</span></div>
+            </div>
+            <div class="station">
+              <div style="font-weight:950;color:#16A34A">T</div>
+              <div><div class="station-name">TotalEnergies</div><div class="small">SP95</div></div>
+              <div class="station-price">1,69 €/L<br><span class="small">1,8 km</span></div>
+            </div>
+            <div class="more">Voir toutes les stations <span>›</span></div>
+            <div class="tabs"><span>⌂ Accueil</span><span>□ Carte</span><span>☆ Favoris</span><span>♙ Profil</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="comparer" class="section compare-section">
+    <div class="container">
+      <div class="compare-box">
+        <div class="compare-head">
+          <div>
+            <span class="eyebrow">Comparateur carburant</span>
+            <h2>Compare les prix des stations essence</h2>
+            <p>Entre une ville, un code postal ou utilise ta position pour afficher les stations, les prix, les noms et la distance.</p>
+          </div>
+          <img src="assets/carburio-icon.png" alt="Logo Carburio">
+        </div>
+
+        <form id="compareForm" class="compare-form">
+          <label>
+            Ville ou code postal
+            <input id="placeInput" type="text" placeholder="Exemple : Tergnier ou 02700" required>
+          </label>
+          <label>
+            Carburant
+            <select id="fuelSelect">
+              <option value="gazole">Gazole</option>
+              <option value="sp95">SP95</option>
+              <option value="sp98">SP98</option>
+              <option value="e10" selected>E10</option>
+              <option value="e85">E85</option>
+              <option value="gplc">GPLc</option>
+            </select>
+          </label>
+          <button class="btn btn-primary compare-submit" type="submit">Comparer maintenant</button>
+          <button class="btn btn-secondary compare-location" id="geoButton" type="button">📍 Utiliser ma position</button>
+        </form>
+
+        <div id="compareStatus" class="compare-status">Astuce : commence par ton code postal pour obtenir les résultats les plus précis.</div>
+        <div id="compareResults" class="compare-results"></div>
+
+        <div class="compare-note">
+          Les prix sont fournis par les données publiques françaises. Le nom de l’enseigne est affiché quand il est présent ou détectable.
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="fonctionnalites" class="features">
+    <div class="container cards">
+      <article class="card"><div class="iconbox">🏷️</div><h3>Comparer les prix</h3><p>Compare instantanément les prix des carburants autour de toi.</p></article>
+      <article class="card"><div class="iconbox">⛽</div><h3>Trouver les stations proches</h3><p>Localise les stations les moins chères près de ta position.</p></article>
+      <article class="card"><div class="iconbox">🗺️</div><h3>Carte interactive</h3><p>Visualise les prix sur la carte et trouve la meilleure offre.</p></article>
+      <article class="card"><div class="iconbox">🐷</div><h3>Économiser à chaque plein</h3><p>Fais le plein au meilleur prix et économise à chaque trajet.</p></article>
+    </div>
+  </section>
+
+  <section id="comment" class="section">
+    <div class="container">
+      <h2>Comment ça marche ?</h2>
+      <p class="intro">Carburio te simplifie la recherche de carburant moins cher en quelques secondes.</p>
+      <div class="steps">
+        <article class="step"><div class="num">1</div><h3>Choisis ton carburant</h3><p>SP95, SP98, E10, E85, Gazole ou GPLc : filtre selon ton véhicule.</p></article>
+        <article class="step"><div class="num">2</div><h3>Compare autour de toi</h3><p>Trie les stations par prix, distance ou enseigne pour trouver la meilleure option.</p></article>
+        <article class="step"><div class="num">3</div><h3>Lance l’itinéraire</h3><p>Va directement à la station choisie et fais des économies sur ton plein.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="carburants" class="section">
+    <div class="container">
+      <h2>Les stations que tu connais</h2>
+      <p class="intro">Retrouve rapidement les enseignes populaires autour de toi.</p>
+      <div class="logos">
+        <span class="logo-pill">TotalEnergies</span>
+        <span class="logo-pill">E.Leclerc</span>
+        <span class="logo-pill">Carrefour</span>
+        <span class="logo-pill">Intermarché</span>
+        <span class="logo-pill">Auchan</span>
+        <span class="logo-pill">Super U</span>
+        <span class="logo-pill">Avia</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <section class="cta-band">
+      <div>
+        <h2>Télécharge Carburio maintenant</h2>
+        <p>Compare les prix, trouve la station la moins chère et arrête de payer ton essence trop cher.</p>
+      </div>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.carburio.app&utm_source=emea_Med" target="_blank" rel="noopener">Télécharger sur Google Play</a>
+    </section>
+  </div>
+
+  <section id="faq" class="section">
+    <div class="container">
+      <h2>Questions fréquentes</h2>
+      <div class="steps">
+        <article class="step"><h3>L’application est-elle gratuite ?</h3><p>Oui, Carburio est pensée pour être simple, rapide et accessible.</p></article>
+        <article class="step"><h3>Quels carburants sont affichés ?</h3><p>Tu peux comparer les carburants courants comme SP95, SP98, E10, E85, Gazole et GPLc.</p></article>
+        <article class="step"><h3>Le site remplace l’application ?</h3><p>Non, ce site présente Carburio. Pour comparer les prix autour de toi, télécharge l’application.</p></article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container foot">
+    <div>© 2026 Carburio · carburio.com</div>
+    <div><a href="confidentialite.html">Confidentialité</a> · <a href="mentions-legales.html">Mentions légales</a></div>
+  </div>
+</footer>
+  <script src="compare.js"></script>
+</body>
+</html>

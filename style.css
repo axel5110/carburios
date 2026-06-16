@@ -1,0 +1,395 @@
+
+:root{
+  --green:#16A34A;
+  --green2:#22C55E;
+  --greenDark:#047857;
+  --ink:#07131f;
+  --muted:#64748b;
+  --soft:#ecfdf5;
+  --line:#d9f3e3;
+  --white:#ffffff;
+  --shadow:0 24px 80px rgba(4,120,87,.18);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at 82% 20%, rgba(34,197,94,.18), transparent 28%),
+    linear-gradient(180deg,#fff 0%,#f6fff9 56%,#ecfdf5 100%);
+}
+a{color:inherit;text-decoration:none}
+.container{width:min(1180px,92vw);margin:auto}
+.header{
+  position:sticky;top:0;z-index:20;
+  background:rgba(255,255,255,.86);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(217,243,227,.8);
+}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:900;font-size:28px;letter-spacing:-.04em}
+.brand img{width:44px;height:44px;border-radius:14px;box-shadow:0 10px 26px rgba(22,163,74,.25)}
+.navlinks{display:flex;gap:34px;color:#172033;font-weight:700}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:15px 22px;border-radius:14px;font-weight:900;
+  border:1px solid transparent;transition:.2s transform,.2s box-shadow,.2s background;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:linear-gradient(135deg,var(--green2),var(--greenDark));color:#fff;box-shadow:0 18px 36px rgba(22,163,74,.28)}
+.btn-secondary{border-color:var(--green);color:var(--greenDark);background:rgba(255,255,255,.7)}
+.hero{position:relative;overflow:hidden;padding:74px 0 70px}
+.hero:after{
+  content:"";position:absolute;inset:auto -8% -28% 38%;height:420px;
+  background:linear-gradient(135deg,rgba(34,197,94,.10),rgba(4,120,87,.42));
+  border-radius:55% 45% 0 0;z-index:-1;transform:rotate(-4deg)
+}
+.hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:64px;align-items:center}
+.app-title{display:flex;align-items:center;gap:22px;margin-bottom:18px}
+.app-title img{width:84px;height:84px;border-radius:24px;box-shadow:0 24px 58px rgba(22,163,74,.25)}
+.app-title span{font-size:62px;font-weight:950;letter-spacing:-.06em}
+h1{
+  font-size:clamp(48px,7vw,84px);line-height:.96;letter-spacing:-.075em;
+  margin:0 0 24px;color:#073b2a;
+}
+.spark{display:inline-block;position:relative}
+.spark:after{
+  content:"";position:absolute;right:-30px;top:24px;width:42px;height:42px;
+  background:
+    linear-gradient(var(--green),var(--green)) 18px 0/5px 18px no-repeat,
+    linear-gradient(var(--green),var(--green)) 0 22px/18px 5px no-repeat,
+    linear-gradient(var(--green),var(--green)) 26px 28px/18px 5px no-repeat;
+  transform:rotate(-25deg)
+}
+.lead{font-size:22px;line-height:1.55;color:#475569;margin:0 0 28px;max-width:670px}
+.ctas{display:flex;gap:18px;flex-wrap:wrap;margin:22px 0}
+.trust{display:flex;gap:10px;align-items:center;color:#365046;font-weight:800;margin-top:18px}
+.check{width:22px;height:22px;border-radius:999px;background:var(--green);color:#fff;display:inline-grid;place-items:center;font-size:14px}
+
+.phone-wrap{display:flex;justify-content:center}
+.phone{
+  width:360px;border:13px solid #0b0d12;border-radius:48px;background:#f8fff9;
+  box-shadow:0 28px 90px rgba(2,44,34,.34);
+  overflow:hidden;position:relative;
+}
+.phone:before{content:"";position:absolute;top:13px;left:50%;transform:translateX(-50%);width:116px;height:28px;background:#07080b;border-radius:999px;z-index:3}
+.screen{padding:26px 20px 18px;min-height:640px}
+.status{display:flex;justify-content:space-between;font-size:13px;font-weight:800;margin-bottom:28px}
+.appbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
+.appbar-left{display:flex;align-items:center;gap:10px;font-size:25px;font-weight:950}
+.appbar-left img{width:30px;height:30px;border-radius:8px}
+.bell{font-size:22px;color:var(--greenDark)}
+.location{color:var(--greenDark);font-weight:900;display:flex;gap:9px;align-items:center;margin-bottom:14px}
+.price-card{
+  background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;
+  box-shadow:0 12px 35px rgba(22,163,74,.09);display:flex;align-items:center;gap:16px
+}
+.pump-icon{font-size:44px;color:var(--green)}
+.price-label{font-weight:800;color:#172033}
+.price{font-size:38px;color:var(--green);font-weight:950;line-height:1}
+.small{font-size:13px;color:#64748b;font-weight:700}
+.chips{display:flex;gap:9px;margin:16px 0 24px}
+.chip{flex:1;border-radius:999px;background:#f3faf6;border:1px solid var(--line);padding:10px 0;text-align:center;font-weight:900;color:#0d4b38;font-size:13px}
+.chip.active{background:var(--green);color:#fff}
+.list-title{font-weight:950;margin-bottom:12px}
+.station{display:grid;grid-template-columns:38px 1fr auto;gap:12px;align-items:center;background:#fff;border:1px solid #e6f5ec;border-radius:14px;padding:10px 12px;margin-bottom:10px}
+.station img{width:34px;height:34px;object-fit:contain;border-radius:8px}
+.station-name{font-weight:950}
+.station-price{text-align:right;color:var(--green);font-weight:950}
+.more{background:#fff;border:1px solid var(--line);border-radius:14px;padding:13px 15px;color:var(--greenDark);font-weight:950;display:flex;justify-content:space-between;margin-top:12px}
+.tabs{display:flex;justify-content:space-around;margin-top:24px;padding-top:13px;border-top:1px solid #e5f3eb;color:#475569;font-size:12px;font-weight:800}
+.tabs span:first-child{color:var(--green)}
+
+.features{padding:18px 0 72px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{
+  background:rgba(255,255,255,.88);border:1px solid var(--line);border-radius:24px;padding:28px 24px;
+  box-shadow:0 22px 60px rgba(15,23,42,.07);min-height:205px
+}
+.iconbox{width:58px;height:58px;border-radius:18px;background:#effdf5;color:var(--green);display:grid;place-items:center;font-size:28px;margin-bottom:18px;border:1px solid var(--line)}
+.card h3{margin:0 0 10px;font-size:21px;letter-spacing:-.03em}
+.card p{margin:0;color:#64748b;line-height:1.55;font-weight:650}
+.section{padding:74px 0}
+.section h2{text-align:center;font-size:46px;letter-spacing:-.055em;margin:0 0 16px;color:#073b2a}
+.section .intro{text-align:center;color:#64748b;font-size:19px;max-width:760px;margin:0 auto 36px;line-height:1.55}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.step{background:white;border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:0 20px 60px rgba(15,23,42,.06)}
+.num{width:42px;height:42px;border-radius:14px;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:950;margin-bottom:16px}
+.logos{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:30px}
+.logo-pill{background:#fff;border:1px solid var(--line);border-radius:999px;padding:12px 18px;display:flex;gap:10px;align-items:center;font-weight:900;box-shadow:0 12px 26px rgba(15,23,42,.05)}
+.logo-pill img{width:30px;height:30px;object-fit:contain}
+.cta-band{margin:40px auto 80px;background:linear-gradient(135deg,var(--green2),var(--greenDark));color:#fff;border-radius:34px;padding:44px;display:flex;justify-content:space-between;align-items:center;gap:30px;box-shadow:var(--shadow)}
+.cta-band h2{margin:0;font-size:38px;letter-spacing:-.05em}
+.cta-band p{margin:10px 0 0;color:rgba(255,255,255,.86);font-size:18px}
+.cta-band .btn{background:#fff;color:var(--greenDark)}
+.footer{border-top:1px solid var(--line);padding:32px 0;background:#fff}
+.foot{display:flex;justify-content:space-between;gap:18px;align-items:center;color:#64748b;font-weight:700}
+.foot a{color:#0f513d}
+@media(max-width:980px){
+  .navlinks{display:none}
+  .hero-grid{grid-template-columns:1fr;gap:42px}
+  .cards,.steps{grid-template-columns:1fr 1fr}
+  .phone{width:min(360px,94vw)}
+  .app-title span{font-size:48px}
+  .cta-band{display:block}
+  .cta-band .btn{margin-top:22px}
+}
+@media(max-width:620px){
+  .nav{height:auto;padding:14px 0}
+  .brand{font-size:22px}
+  .brand img{width:38px;height:38px}
+  .header .btn{display:none}
+  .cards,.steps{grid-template-columns:1fr}
+  .hero{padding-top:48px}
+  .app-title img{width:64px;height:64px}
+  .app-title span{font-size:42px}
+  h1{font-size:52px}
+  .lead{font-size:18px}
+  .btn{width:100%}
+  .foot{display:block;text-align:center}
+}
+
+
+/* Comparateur Carburio */
+.compare-section{padding-top:40px}
+.compare-box{
+  background:rgba(255,255,255,.92);
+  border:1px solid var(--line);
+  border-radius:34px;
+  padding:34px;
+  box-shadow:0 24px 80px rgba(4,120,87,.12);
+  overflow:hidden;
+  position:relative;
+}
+.compare-box:before{
+  content:"";
+  position:absolute;
+  right:-90px;
+  top:-100px;
+  width:260px;
+  height:260px;
+  border-radius:999px;
+  background:radial-gradient(circle, rgba(34,197,94,.22), transparent 65%);
+}
+.compare-head{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:24px;
+  position:relative;
+}
+.compare-head img{
+  width:78px;
+  height:78px;
+  border-radius:22px;
+  box-shadow:0 18px 45px rgba(22,163,74,.25);
+}
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color:var(--greenDark);
+  background:#ecfdf5;
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:8px 13px;
+  font-weight:950;
+  margin-bottom:14px;
+}
+.compare-head h2{
+  text-align:left;
+  margin:0 0 12px;
+}
+.compare-head p{
+  color:#64748b;
+  font-size:18px;
+  line-height:1.55;
+  margin:0;
+  max-width:720px;
+}
+.compare-form{
+  display:grid;
+  grid-template-columns:1.2fr .7fr auto;
+  gap:16px;
+  align-items:end;
+  margin-top:28px;
+  position:relative;
+}
+.compare-form label{
+  color:#0f3d2e;
+  font-weight:950;
+}
+.compare-form input,
+.compare-form select{
+  width:100%;
+  display:block;
+  margin-top:9px;
+  padding:16px 16px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:#fff;
+  font-size:16px;
+  font-weight:750;
+  outline:none;
+}
+.compare-form input:focus,
+.compare-form select:focus{
+  border-color:var(--green);
+  box-shadow:0 0 0 4px rgba(34,197,94,.12);
+}
+.compare-submit{height:53px}
+.compare-status{
+  margin-top:18px;
+  padding:14px 16px;
+  border-radius:16px;
+  background:#f7fff9;
+  border:1px solid var(--line);
+  color:#476456;
+  font-weight:750;
+}
+.compare-results{
+  margin-top:18px;
+  display:grid;
+  gap:12px;
+}
+.result-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:16px;
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:18px;
+  align-items:center;
+  box-shadow:0 12px 30px rgba(15,23,42,.05);
+}
+.result-card strong{
+  display:block;
+  font-size:18px;
+  color:#0b3327;
+}
+.result-card .address{
+  color:#64748b;
+  margin-top:5px;
+  font-weight:700;
+}
+.result-card .price-badge{
+  color:#fff;
+  background:linear-gradient(135deg,var(--green2),var(--greenDark));
+  border-radius:18px;
+  padding:13px 16px;
+  font-size:22px;
+  font-weight:950;
+  white-space:nowrap;
+  text-align:center;
+}
+.result-card .date{
+  display:block;
+  font-size:12px;
+  font-weight:700;
+  opacity:.82;
+  margin-top:2px;
+}
+.compare-note{
+  margin-top:18px;
+  color:#64748b;
+  font-size:14px;
+  line-height:1.5;
+}
+@media(max-width:980px){
+  .compare-form{grid-template-columns:1fr}
+  .compare-head{display:block}
+  .compare-head img{margin-top:18px}
+}
+@media(max-width:620px){
+  .compare-box{padding:22px;border-radius:26px}
+  .result-card{grid-template-columns:1fr}
+  .result-card .price-badge{width:max-content}
+}
+
+
+.result-main{
+  display:grid;
+  grid-template-columns:48px 1fr;
+  gap:14px;
+  align-items:center;
+}
+.station-logo{
+  width:48px;
+  height:48px;
+  border-radius:16px;
+  background:#f0fdf4;
+  border:1px solid var(--line);
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+}
+.station-logo img{
+  width:38px;
+  height:38px;
+  object-fit:contain;
+}
+.station-initial{
+  color:var(--greenDark);
+  font-weight:950;
+  font-size:20px;
+}
+.map-link{
+  display:inline-flex;
+  margin-top:8px;
+  color:var(--greenDark);
+  font-weight:950;
+  background:#ecfdf5;
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:6px 10px;
+}
+
+/* Les distances sont affichées dans la ligne d'information de chaque station. */
+
+.name-source{
+  display:inline-flex;
+  vertical-align:middle;
+  margin-left:8px;
+  padding:3px 7px;
+  border-radius:999px;
+  background:#ecfdf5;
+  color:var(--greenDark);
+  border:1px solid var(--line);
+  font-size:11px;
+  font-weight:950;
+}
+
+
+/* Bouton position + affichage noms stations */
+.compare-location{
+  height:53px;
+  white-space:nowrap;
+}
+.name-source{
+  display:inline-flex;
+  vertical-align:middle;
+  margin-left:8px;
+  padding:3px 7px;
+  border-radius:999px;
+  background:#ecfdf5;
+  color:var(--greenDark);
+  border:1px solid var(--line);
+  font-size:11px;
+  font-weight:950;
+}
+@media(max-width:1180px){
+  .compare-form{
+    grid-template-columns:1fr 1fr;
+  }
+  .compare-submit,.compare-location{
+    width:100%;
+  }
+}
+@media(max-width:760px){
+  .compare-form{
+    grid-template-columns:1fr;
+  }
+}

@@ -1,0 +1,8 @@
+Version améliorée :
+- Bouton Utiliser ma position
+- Demande l'autorisation navigateur
+- Calcule la distance depuis la vraie position utilisateur
+- Récupère mieux les noms via OpenStreetMap
+- Match OSM accepté jusqu'à 1 km
+- Si aucun nom trouvé : affiche Station-service – adresse
+- Trie par distance quand la position est activée

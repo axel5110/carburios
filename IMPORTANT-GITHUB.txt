@@ -1,0 +1,1 @@
+Déployer ce site via GitHub dans Cloudflare Pages. Ne pas utiliser Direct Upload pour cette version, car elle contient functions/api/carburants.js.
